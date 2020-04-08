@@ -1,7 +1,7 @@
 A docker image for HanLP with jupyter supported. A very handy tool for learning HanLP.
 
 ```
-docker run -i -d -p 8888:8888 walterinsh/hanlp:2.0.0a41-jupyter
+docker run -d -p 8888:8888 walterinsh/hanlp:2.0.0a41-jupyter
 >28bf3d7e20bc18bf9760a6c0a371c0fb490f5054ff4d0a6eaeb5b07eb236e23c(container id)
 
 docker logs 28bf3d7e20bc18bf9760a6c0a371c0fb490f5054ff4d0a6eaeb5b07eb236e23c
