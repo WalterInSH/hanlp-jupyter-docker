@@ -1,7 +1,14 @@
 A docker image for HanLP with jupyter supported. A very handy tool for learning HanLP.
 
+一个集成有Jupyter编辑器的[HanLP](https://github.com/hankcs/HanLP) Docker镜像，可以让你快速体验HanLP。
+
+## 版本
+目前使用的是HanLP 2.0.0a42
+
+## 使用方法
+
 ```
-docker run -d -p 8888:8888 walterinsh/hanlp:2.0.0a41-jupyter
+docker run -d -p 8888:8888 walterinsh/hanlp:2.0.0a42-jupyter
 >28bf3d7e20bc18bf9760a6c0a371c0fb490f5054ff4d0a6eaeb5b07eb236e23c(container id)
 
 docker logs 28bf3d7e20bc18bf9760a6c0a371c0fb490f5054ff4d0a6eaeb5b07eb236e23c

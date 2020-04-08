@@ -3,11 +3,7 @@ MAINTAINER Walter Zhang <walterinsh@outlook.com>
 
 # hanlp downloads tensorflow which will take too long
 # thus execute this command separately then docker can use its cache
-RUN pip3 --no-cache-dir install hanlp==2.0.0a41
-
-# hanlp==2.0.0a41 needs bert-for-tf2==0.12.7 which needs py-params>=0.9.6 
-# but hanlp==2.0.0a41 installs py-params==0.8.2 by default
-RUN pip3 install --upgrade py-params==0.9.6
+RUN pip3 --no-cache-dir install hanlp==2.0.0a42
 
 # install jupyter
 RUN pip3 --no-cache-dir install jupyter==1.0.0 \
