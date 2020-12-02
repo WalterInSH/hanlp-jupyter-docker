@@ -5,16 +5,11 @@ MAINTAINER Walter Zhang <walterinsh@outlook.com>
 # thus execute this command separately then docker can use its cache
 RUN pip3 --no-cache-dir install hanlp==2.0.0a42
 
-# install jupyter
-RUN pip3 --no-cache-dir install jupyter==1.0.0 \
-        jupyter-http-over-ws==0.0.8 \
-        ipykernel==5.1.1 \
-        nbformat==4.4.0
-
-RUN jupyter serverextension enable --py jupyter_http_over_ws
+# install jupyter lab 
+RUN pip3 install -i https://mirrors.aliyun.com/pypi/simple jupyterlab
 
 WORKDIR /jupyter
 
 EXPOSE 8888
 
-CMD ["bash", "-c", "jupyter notebook --notebook-dir=/jupyter --ip 0.0.0.0 --no-browser --allow-root"]
+CMD ["bash", "-c", "jupyter lab --notebook-dir=/jupyter --ip 0.0.0.0 --no-browser --allow-root"]
